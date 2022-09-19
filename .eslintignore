@@ -1,0 +1,13 @@
+/build/
+/config/
+/dist/
+/*.js
+/test/unit/coverage/
+/* eslint-disable */
+/src
+/* eslint-disable global-require */
+// eslint-disable-next-line
+build/*.js
+src/assets
+public
+dist
