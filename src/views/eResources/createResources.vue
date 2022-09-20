@@ -42,6 +42,34 @@
 
             <b-col cols="12">
               <b-form-group
+                  label="Batch"
+                  label-for="v-batch"
+              >
+                <v-select
+                    v-model="post_values.batch"
+                    :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
+                    :options="model.batchOptions"
+                    placeholder="Please select"
+                />
+              </b-form-group>
+            </b-col>
+
+            <b-col cols="12">
+              <b-form-group
+                  label="Semester"
+                  label-for="v-semester"
+              >
+                <v-select
+                    v-model="post_values.semester"
+                    :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
+                    :options="model.semesterOptions"
+                    placeholder="Please select"
+                />
+              </b-form-group>
+            </b-col>
+
+            <b-col cols="12">
+              <b-form-group
                   label="Type"
                   label-for="v-type"
               >
@@ -230,6 +258,8 @@ export default {
       post_values: {
         author: '',
         department: '',
+        semester: '',
+        batch: '',
         title: '',
         resource: '',
         type: '',
@@ -241,8 +271,10 @@ export default {
         resource: '',
         department: '',
         departmentOptions: ['Nursing', 'BMS', 'Psychology', 'Marketing', 'Acupuncture', 'IT', 'HR', 'Accounting'],
-        type: ['Book', 'Journal', 'Magazine', 'PDF', 'Article'],
-        resourceOptions: ['Thesis', 'General'],
+        semesterOptions: ['1st_semester', '2nd_semester'],
+        batchOptions: ['1st_year', '2nd_year', '3rd_year', '4th_year'],
+        type: ['Book', 'past_papers', 'Magazine', 'PDF', 'Article'],
+        resourceOptions: ['Thesis', 'General', 'past_papers'],
         option: [{ title: 'Square' }, { title: 'Rectangle' }, { title: 'Rombo' }, { title: 'Romboid' }],
       }
     }

@@ -394,6 +394,8 @@ export default {
         'resource_title',
         'type',
         'title',
+        'batch',
+        'semester',
         'author',
         'department',
         'resource',
